@@ -57,6 +57,26 @@ class a1_real_Test {
         }
     }
 
+    @Test
+    void silence2(){
+        int[] positions = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,2};
+        int expectedOut = 1;
+        int out = a1_real.silence(positions);
+        if (expectedOut != out) {
+            fail("Expected output: " + expectedOut + " instead, got " + out);
+        }
+    }
+
+    @Test
+    void silence3(){
+        int[] positions = {1,2,1,2,1,2,1,2};
+        int expectedOut = 2;
+        int out = a1_real.silence(positions);
+        if (expectedOut != out) {
+            fail("Expected output: " + expectedOut + " instead, got " + out);
+        }
+    }
+
 
     private static int[] generatePositions(int size, int gap, int seed){
         int[] out;
